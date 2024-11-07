@@ -1,0 +1,331 @@
+/* Grundlegende Stileinstellungen für alle Elemente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body mit Logo als Hintergrundbild */
+/* Gehört zu allen Seiten */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    background-image: url('MJO Logo.png'); /* Use the correct background image */
+    background-size: cover; /* Bild deckt die gesamte Seite ab */
+    background-repeat: no-repeat; /* Verhindert Wiederholung des Bildes */
+    background-position: center; /* Zentriert das Bild */
+    background-attachment: fixed; /* Fixiert das Bild beim Scrollen */
+    background-color: #f0f0f0; /* Hellgrauer Hintergrund */
+    height: 150vh; /* Stellt sicher, dass das Bild die gesamte Höhe der Seite einnimmt */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 150vh;
+    /* Stellt sicher, dass die minimale Höhe des Body die Höhe
+   }
+
+   /* Header-Styling mit Zentrierung */
+    /* Gehört zu allen Seiten */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Stile für die Hauptüberschrift */
+    /* Gehört zu allen Seiten */
+
+    h1 {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 2rem;
+        font-weight: 900;
+        text-align: center;
+        color: #FFD700; /* Goldene Farbe */
+        background-color: AccentColor;
+        padding: 20px 30px;
+        background-color: #2c2c2c;
+    }
+
+    /* Stile für die Unterüberschrift */
+    /* Gehört zu allen Seiten */
+
+    h2 {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    p1 {
+        font-size: 1rem; /* Verkleinert die Schriftgröße der Absätze */
+        color: #FFFF00; /* Textfarbe für die ganzen Beschreibungen */
+        background-color: #2c2c2c; /* Farbe der Textboxen */
+        border-radius: 4px;
+        margin-top: 0px; /* Verkleinert den Abstand zum vorherigen Element */
+    }
+
+    /* Setze den Main-Container auf Flexbox, um Inhalt in der Mitte zu platzieren */
+    /* Gehört zu allen Seiten */
+
+    main {
+        display: flex;
+        justify-content: center; /* Zentriere den Inhalt horizontal */
+        align-items: center; /* Zentriere den Inhalt vertikal */
+        height: 100vh; /* Nimmt die gesamte Höhe des Viewports ein */
+        width: 100%; /* Nimmt die gesamte Breite ein */
+        text-align: center; /* Text wird zentriert */
+    }
+
+    /* Button-Styling Zurück buttens */
+    /* Gehört zu allen Seiten */
+
+    button, .back-btn {
+        background-color: #FFD700;
+        color: black;
+        padding: 10px 20px; /* Größe des Zurück buttens anpassen */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    /* Zurück-Button (Position absolut) */
+    /* Gehört zu allen Seiten */
+
+    .back-btn {
+        position: absolute; /* Positioniere den Button absolut */
+        top: 20px; /* Abstand vom oberen Rand */
+        right: 20px; /* Abstand vom rechten Rand */
+        z-index: 1000; /* Stelle sicher, dass der Button oben ist */
+    }
+
+    button:hover, .back-btn:hover {
+        background-color: rgba(215, 215, 0, 0.8); /* Leicht graues Gelb beim Hover */
+    }
+    .search-form {
+        display: flex; / Flexbox für das Layout des Suchfelds /
+        align-items: center; / Vertikal zentrieren /
+        margin-right: 5px; / Abstand von der linken Seite /
+    }
+
+    .search-input {
+        padding: 10px; / Innenabstand für das Eingabefeld /
+        font-size: 16px; / Schriftgröße /
+        border: 1px solid #ccc; / Rahmenfarbe /
+        border-radius: 4px; / Abgerundete Ecken /
+        margin-right: 5px; / Abstand zwischen Eingabefeld und Button /
+        color: #000; / Textfarbe im Eingabefeld /
+    }
+
+    .search-button {
+        background-color: #FFD700; / Hintergrundfarbe des Buttons /
+        color: black; / Textfarbe /
+        padding: 10px 15px; / Innenabstand /
+        border: none; / Kein Rahmen /
+        border-radius: 4px; / Abgerundete Ecken /
+        cursor: pointer; / Zeiger-Cursor /
+        font-size: 16px; / Schriftgröße /
+        transition: background-color 0.3s; / Übergangseffekt /
+    }
+    .search-button:hover {
+        background-color: rgba(255, 211, 155); / Helleres Gelb beim Hover */
+    }
+
+    /* Shop-Container */
+
+    .shop-container {
+        display: flex;
+        flex-wrap: wrap; /* Ermöglicht das Umfließen der Karten */
+        justify-content: center; /* Zentriert die Karten */
+        gap: 20px; /* Abstand zwischen den Karten */
+        max-width: 1200px; /* Maximale Breite */
+        margin-top: 20px;
+    }
+
+    /* Spielkarte */
+
+    .game-card {
+        background-color: #fff; /* Weißer Hintergrund für die Karte */
+        border: 1px solid #ccc; /* Grauer Rand */
+        border-radius: 8px; /* Abgerundete Ecken */
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten für 3D-Effekt */
+        width: 250px; /* Breite der Karte */
+        transition: transform 0.3s; /* Übergangseffekt bei Hover */
+    }
+
+    .game-card:hover {
+        transform: scale(1.05); /* Vergrößern beim Hover */
+    }
+
+    /* Bild der Spiele */
+
+    .game-image {
+        width: 100%; /* Vollbreite der Bilder */
+        height: auto; /* Automatische Höhe */
+        border-radius: 4px; /* Abgerundete Ecken für Bilder */
+    }
+
+    /* Preis */
+
+    .price {
+        font-size: 1.5rem; /* Schriftgröße für den Preis */
+        color: #FFD700; /* Goldene Farbe */
+        margin: 10px 0; /* Abstand oben und unten */
+    }
+
+    /* Beschreibung */
+
+    .description {
+        font-size: 0.9rem; /* Kleinere Schriftgröße */
+        color: #333; /* Dunkelgraue Farbe für die Beschreibung */
+        margin-bottom: 15px; /* Abstand zum Button */
+    }
+
+    /* "In den Warenkorb"-Button */
+
+    .add-to-cart {
+        background-color: #FFD700; /* Gelb für den Button */
+        color: black; /* Schwarze Schriftfarbe */
+        padding: 10px 15px; /* Innenabstand für den Button */
+        border: none; /* Kein Rand */
+        border-radius: 4px; /* Abgerundete Ecken */
+        cursor: pointer; /* Zeiger-Cursor */
+        font-size: 1rem; /* Schriftgröße */
+        transition: background-color 0.3s; /* Übergangseffekt bei Hover */
+    }
+
+    .add-to-cart:hover {
+        background-color: rgba(215, 215, 0, 0.8); /* Leicht graues Gelb beim Hover */
+    }
+
+    /* Dropdown-Button-Styling */
+
+    .dropbtn {
+        background-color: #FFD700; /* Gelb */
+        color: black;
+        padding: 10px 20px; /* Gleiche Höhe wie andere Buttons */
+        font-size: 16px; /* Gleiche Schriftgröße */
+        border: none;
+        cursor: pointer;
+
+    }
+
+    /* Dropdown-Container */
+
+    .dropdown {
+        position: absolute; /* Absolut positioniert */
+        top: 20px; /* Abstand vom oberen Rand */
+        left: 20px; /* Abstand vom linken Rand */
+    }
+
+    /* Dropdown-Inhalt */
+
+    .dropdown-content {
+        display: none; /* Anfangs unsichtbar */
+        position: absolute;
+        background-color: #FFD700; /* Gelb */
+        min-width: 160px; /* Minimale Breite */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Stile für die Links im Dropdown */
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px; /* Innenabstand für Links */
+        text-decoration: none;
+        display: block; /* Block-Element */
+    }
+
+    /* Hover-Effekt für Dropdown-Links */
+
+    .dropdown-content a:hover {
+        background-color: rgba(211, 211, 211, 0.8); /* Hellgrauer Hintergrund beim Hover */
+    }
+
+    /* Dropdown sichtbar machen, wenn der Button gedrückt wird */
+
+    .dropdown:hover .dropdown-content {
+        display: block; /* Dropdown-Inhalt anzeigen */
+    }
+}
+/* Stil für den Haupt-Kategorien-Button */
+.category-dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.main-category-btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.main-category-btn:hover {
+    background-color: #FFA500;
+}
+
+/* Stil für das Dropdown-Menü */
+.dropdown-content {
+    display: none; /* Versteckt das Dropdown-Element standardmäßig */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content button {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content button:hover {
+    background-color: #FFA500;
+}
+
+/* Stil für die Spieleliste */
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.game {
+    padding: 15px;
+    background-color: #d4af37;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.game:hover {
+    transform: scale(1.05);
+    background-color: #FFD700;
+}
